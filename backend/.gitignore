@@ -1,0 +1,13 @@
+# Python / Flask
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+instance/
+.env
+
+# VS Code / Editor
+.vscode/
+*.swp

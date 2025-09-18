@@ -1,0 +1,130 @@
+/* Body & overall page */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e0e0e0; /* soft gray background */
+}
+
+/* Chat container */
+.chat-container {
+  width: 90%;          /* expanded width */
+  max-width: 1000px;   /* allow wider screens */
+  height: 80vh;        /* responsive height */
+  background: #fdfdfd; /* light soft background */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dark mode */
+.app-container.dark .chat-container {
+  background: #2b2b2b;
+  color: #f0f0f0;
+}
+
+/* Header */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #4a90e2;
+  color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+/* Chat messages */
+.chat-box {
+  padding: 15px;
+  flex: 1;              /* fills remaining height */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  background: #f6f6f6;
+}
+
+.app-container.dark .chat-box {
+  background: #3a3a3a;
+}
+
+/* Chat bubbles */
+.chat-message {
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 25px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: #4a90e2;
+  color: white;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background: #e5e5ea;
+  color: black;
+}
+
+.app-container.dark .chat-message.bot {
+  background: #555;
+  color: #f0f0f0;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  background: #f6f6f6;
+  flex-shrink: 0; /* never shrink */
+  gap: 10px;
+}
+
+.app-container.dark .input-area {
+  background: #3a3a3a;
+  border-top: 1px solid #444;
+}
+
+input {
+  flex: 1; /* takes available space */
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  min-width: 0; /* prevent overflow */
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px; /* wider buttons */
+  border: none;
+  border-radius: 25px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  flex-shrink: 0; /* buttons never shrink */
+}
+
+button.end-chat {
+  background: #e94e77;
+}
+
+button:hover { opacity: 0.9; }
