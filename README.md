@@ -93,7 +93,6 @@ pip install -r requirements.txt
 5. Set your Gemini API key (optional, for AI mood detection):
 
 ```bash
-export GEMINI_API_KEY="YOUR_GEMINI_KEY"  # Linux/macOS
 set GEMINI_API_KEY="YOUR_GEMINI_KEY"     # Windows
 ```
 
